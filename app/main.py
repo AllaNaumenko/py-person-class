@@ -1,7 +1,7 @@
 class Person:
     people = {}
 
-    def __init__(self, name: str, age: int):
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         Person.people[name] = self
@@ -16,6 +16,7 @@ def create_person_list(people: list[dict]) -> list[Person]:
         if person_dict.get("wife"):
             setattr(person_obj, "wife", Person.people[person_dict["wife"]])
         if person_dict.get("husband"):
-            setattr(person_obj, "husband", Person.people[person_dict["husband"]])
+            setattr(person_obj, "husband",
+        Person.people[person_dict["husband"]])
 
     return result
