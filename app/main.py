@@ -15,7 +15,7 @@ def create_person_list(people: list) -> list:
     for p in people:
         me = Person.peolpe[p["name"]]
         if "wife" in p and p["wife"] is not None:
-            setattr(me, "wifw", Person.people[p["wife"]])
+            setattr(me, "wife", Person.people[p["wife"]])
         if "husband" in p and p["husband"] is not None:
             setattr(me, "husband", Person.people[p["husband"]])
 
