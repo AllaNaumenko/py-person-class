@@ -17,6 +17,6 @@ def create_person_list(people: list[dict]) -> list[Person]:
             setattr(person_obj, "wife", Person.people[person_dict["wife"]])
         if person_dict.get("husband"):
             setattr(person_obj, "husband",
-        Person.people[person_dict["husband"]])
+                    Person.people[person_dict["husband"]])
 
     return result
